@@ -1,14 +1,18 @@
-// tryingIde
 package main
 
-import (
+import(
 	"fmt"
-//	"strings"
-//	"os"
+	"os" 
+	"strings"
 )
 
 func main() {
-	number := 10;
-	fmt.Println("Enter the number" , number)
-	fmt.Println("Hello World!")
+	who:= "World!"
+	fmt.Println(len(os.Args))
+	if len(os.Args)>1 {
+		
+		who = strings.Join(os.Args[1:] ," ")
+	}
+
+	fmt.Println("Hello" , who)
 }
